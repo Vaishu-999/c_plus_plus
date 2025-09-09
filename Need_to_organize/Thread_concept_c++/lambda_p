@@ -1,0 +1,14 @@
+#include <iostream>
+#include <thread> 
+using namespace std;
+int main()
+{
+    int n = 5 ;
+    std::thread t([](int m){
+        cout<<"n value : "<< m;
+    },n );
+
+    t.join();
+    return 0;
+
+}
